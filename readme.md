@@ -2,7 +2,6 @@
 
  **1. Git checkout**
     
-![Alt text](stackoverflowexemple.jpg)
 
 La commande “git checkout” permet la bascule sur une autre branche ou de restaurer des fichiers de l’arbre actuel.
 Il existe trois commandes principales pour ces actions :
@@ -28,6 +27,8 @@ Git a introduit deux nouvelles commandes lors de la maj 2.23 :
     
 
 **3.  Pourquoi avoir implanté git switch alors que git checkout le faisait déjà ?**
+
+![Alt text](stackoverflowexemple.jpg)
     
 
 Les commandes “git  checkout <branchname> et ” “git checkout -- <path_to_file>” avaient tendance à rendre confus les utilisateurs, aussi bien les novices que les plus expérimentés, car ces deux fonctionnalités sont totalement différentes, notamment si l’on travaille sur un fichier et une branche du même nom.
