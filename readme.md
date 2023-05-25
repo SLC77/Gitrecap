@@ -46,8 +46,8 @@ Voici un tableau comparatif des commandes “git  checkout” et “git switch"
 | `git checkout`                                        | `N/A (use git status)`                                                            |
 | `git checkout -b <new_branch>[<start_point>]`         | `git switch -c <new-branch>[<start-point>]`                                       |
 | `git checkout -B <new_branch>[<start_point>]`         | `git switch -C <new-branch>[<start-point>]`                                       |
-| `git checkout --orphan<br><new_branch>`               | `git switch --orphan<br><new-branch>`                                             |
-| `git checkout --orphan<br><new_branch> <start_point>` | `N/A (use git switch <start-point> then git switch --orphan <new-<br>branch>)`    |
+| `git checkout --orphan <new_branch>`                  | `git switch --orphan <new-branch>`                                                |
+| `git checkout --orphan <new_branch> <start_point>`    | `N/A (use git switch <start-point> then git switch --orphan <new-<br>branch>)`    |
 | `git checkout [--detach] <commit>`                    | `git switch --detach <commit>`                                                    |
 | `git checkout [--detach] [<branch>]`                  | `git switch --detach [<branch>]`                                                  |
 | `git checkout [--] <pathspec>…`                       | `git restore [--] <pathspec>…`                                                    |
