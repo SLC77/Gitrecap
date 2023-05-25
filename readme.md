@@ -1,4 +1,4 @@
-#Git checkout vs git switch / git restore
+**Git checkout vs git switch / git restore**
 
  **1. Git checkout**
     
@@ -36,12 +36,25 @@ Les commandes “git  checkout <branchname> et ” “git checkout -- <path_to_f
 ![Alt text](stackoverflowexemple2.jpg)
 
 
-Pour remédier à cela et rendre les commandes plus claires et concises sur l’interface, Git a donc introduit le 16 aout 2019 les commandes “git switch” et “git restore”. La commande “git checkout” était considérée trop “couteau suisse” avec des sous commandes sans rapports.
+Pour remédier à cela et rendre les commandes plus claires et concises sur l’interface, Git a donc introduit le 16 aout 2019 les commandes “git switch” et “git restore”. La commande “git checkout” était considérée trop “couteau suisse” avec des fonctions sans rapports entre elles.
 
 Voici un tableau comparatif des commandes “git  checkout” et “git switch"
 
-
-
+|                 **Previous command**                	|                                 **New command**                                 	|
+|:---------------------------------------------------:	|:-------------------------------------------------------------------------------:	|
+| git checkout <branch>                               	| git switch <branch>                                                             	|
+| git checkout                                        	| N/A (use git status)                                                            	|
+| git checkout -b <new_branch><br>[<start_point>]     	| git switch -c <new-branch><br>[<start-point>]                                   	|
+| git checkout -B <new_branch><br>[<start_point>]     	| git switch -C <new-branch><br>[<start-point>]                                   	|
+| git checkout --orphan<br><new_branch>               	| git switch --orphan<br><new-branch>                                             	|
+| git checkout --orphan<br><new_branch> <start_point> 	| N/A (use git switch <start-point><br>then git switch --orphan <new-<br>branch>) 	|
+| git checkout [--detach]<br><commit>                 	| git switch --detach <commit>                                                    	|
+| git checkout [--detach]<br>[<branch>]               	| git switch --detach [<branch>]                                                  	|
+| git checkout [--] <pathspec>…                       	| git restore [--] …                                                              	|
+| git checkout --pathspec-from-file=<file>              | git restore --pathspec-from-file=<file>                                          	|
+| git checkout <tree-ish> [--] <pathspec>…              | git restore -s <tree> [--] <pathspec>…                                            |
+| // --pathspec-from-file=<file>                        | // --pathspec-from-file=<file>                                                    |
+| git checkout -p [<tree-ish>] [--] [<pathspec>…]       | git restore -p [-s <tree>] [--] [<pathspec>…]                                     |
 
 Sources
 
